@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import './css/button.css'
+// import './css/button.css'
 import Seo from "../components/seo"
 
 export const Head = () => <Seo title="เกี่ยวกับเรา" />

@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/assign1a-task2",
   siteMetadata: {
     title: `ลงทะเบียนเรียน`,
     description: `A simple bootstrap 5 and Sass starter for Gatsby. This barebones starter ships with the main Gatsby configuration files you might need.`,

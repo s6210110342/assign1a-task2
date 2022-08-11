@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
+import './css/button.css'
 import Seo from "../components/seo"
 
+export const Head = () => <Seo title="เกี่ยวกับเรา" />
 const AboutPage = () => (
   <Layout>
     <Seo title="About Us" />
@@ -31,11 +32,12 @@ const AboutPage = () => (
         </p>
         <p>Link URL Github <a href="https://github.com/s6210110342/assign1a-task2" target="_blank" rel="noopener noreferrer">here...</a></p>
       </div>
-      <Link to="/">Go back to the homepage</Link>
+      <form action="/">
+        <button class="button"><span>หน้าแรก</span></button>
+      </form>
     </div>
   </Layout>
 )
 
-export const Head = () => <Seo title="Page two" />
 
 export default AboutPage

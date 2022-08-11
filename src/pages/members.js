@@ -53,6 +53,9 @@ const MemberPage = () => {
 
   return (
     <Layout>
+      <Seo title="Member" />
+      <div className="container  my-5">
+      <div className="container">
       <h1 align="center">รายชื่อนักศึกษาทั้งหมด</h1>
       <div className="table">
         <TableContainer componebt={Paper}>
@@ -77,7 +80,9 @@ const MemberPage = () => {
           </Table>
         </TableContainer>
       </div>
+      </div>
       <Link to="/">หน้าแรก</Link>
+      </div>
     </Layout>
   )
 }

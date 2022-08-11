@@ -31,8 +31,8 @@ const AboutPage = () => (
           </ul>
         </p>
         <p>Link URL Github <a href="https://github.com/s6210110342/assign1a-task2" target="_blank" rel="noopener noreferrer">here...</a></p>
-      </div>
-      <Link to="/">หน้าแรก</Link>
+    </div>
+    <Link to="/">หน้าแรก</Link>
     </div>
   </Layout>
 )

@@ -4,7 +4,6 @@ import { tableCellClasses } from '@mui/material/TableCell';
 import { styled } from '@mui/material/styles';
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import './css/button.css'
 import Seo from "../components/seo"
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -88,9 +87,7 @@ const EnrollmentsPage = () => {
           </Table>
         </TableContainer>
       </div>
-      <form action="/">
-        <button class="button"><span>หน้าแรก</span></button>
-      </form>
+      <Link to="/">หน้าแรก</Link>
     </Layout>
   )
 }

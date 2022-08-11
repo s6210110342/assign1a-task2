@@ -28,6 +28,7 @@
     "sass": "1.45.2"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "2.5.1"
   },
   "keywords": [

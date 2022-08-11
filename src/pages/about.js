@@ -29,7 +29,7 @@ const AboutPage = () => (
                  <b>รหัสนักศึกษา: </b> 6210110723
           </ul>
         </p>
-        <p>Link URL Github <a href="https://github.com/r-ichard" target="_blank" rel="noopener noreferrer">here...</a></p>
+        <p>Link URL Github <a href="https://github.com/s6210110342/assign1a-task2" target="_blank" rel="noopener noreferrer">here...</a></p>
       </div>
       <Link to="/">Go back to the homepage</Link>
     </div>

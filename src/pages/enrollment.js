@@ -53,6 +53,9 @@ const EnrollmentsPage = () => {
 
   return (
     <Layout>
+      <Seo title="Member" />
+      <div className="container  my-5">
+      <div className="container">
       <h1 align="center">ผลการลงทะเบียนเรียนของนักศึกษาทั้งหมด</h1>
       <div className="table">
         <TableContainer componebt={Paper}>
@@ -87,7 +90,9 @@ const EnrollmentsPage = () => {
           </Table>
         </TableContainer>
       </div>
+      </div>
       <Link to="/">หน้าแรก</Link>
+      </div>
     </Layout>
   )
 }

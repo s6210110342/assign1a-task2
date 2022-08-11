@@ -26,14 +26,35 @@ const Navbar = ({ siteTitle }) => {
               <ExactNavLink
                 to="/"
               >
-                Home
+                หน้าแรก
+              </ExactNavLink>
+            </li>
+            <li className="nav-item">
+              <ExactNavLink
+                to="/members"
+              >
+                รายชื่อนักศึกษาทั้งหมด
+              </ExactNavLink>
+            </li>
+            <li className="nav-item">
+              <ExactNavLink
+                to="/courses"
+              >
+                วิชาทั้งหมดที่เปิดสอน
+              </ExactNavLink>
+            </li>
+            <li className="nav-item">
+              <ExactNavLink
+                to="/courses"
+              >
+                ผลการลงทะเบียน
               </ExactNavLink>
             </li>
             <li className="nav-item">
               <ExactNavLink
                 to="/about"
               >
-                About
+                เกี่ยวกับเรา
               </ExactNavLink>
             </li>
           </ul>

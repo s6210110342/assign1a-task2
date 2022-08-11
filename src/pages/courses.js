@@ -1,0 +1,92 @@
+import * as React from "react"
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { tableCellClasses } from '@mui/material/TableCell';
+import { styled } from '@mui/material/styles';
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Layout from "../components/layout"
+import './css/button.css'
+import Seo from "../components/seo"
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: '#909497',
+    color: theme.palette.common.white,
+    fontSize: 16,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 16,
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
+
+export const Head = () => <Seo title="รายชื่อวิชาที่เปิดสอน" />
+const CoursesPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      directus {
+        Member {
+          id, firstname, surname
+        }
+        Course {
+          id, subject_name, day, start_time, end_time
+        }
+        Enrollment {
+          id
+          member_id {
+            id, firstname, surname
+          }
+          course_id {
+            id, subject_name, day, start_time, end_time
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <Layout>
+      <h1 align="center">รายวิชาทั้งหมดที่เปิดสอน</h1>
+      <div className="table">
+        <TableContainer componebt={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+                <TableRow>
+                  <StyledTableCell align="center">รหัสวิชา</StyledTableCell>
+                  <StyledTableCell align="center">ชื่อวิชา</StyledTableCell>
+                  <StyledTableCell align="center">วัน</StyledTableCell>
+                  <StyledTableCell align="center">เริ่มเวลา</StyledTableCell>
+                  <StyledTableCell align="center">เสร็จเวลา</StyledTableCell>
+                </TableRow>
+            </TableHead>
+
+            <TableBody>
+              { data.directus.Course.map((course) => (
+                <StyledTableRow key={course.id}>
+                  <StyledTableCell align="center"> { course.id } </StyledTableCell>
+                  <StyledTableCell align="center"> { course.subject_name } </StyledTableCell>
+                  <StyledTableCell align="center"> { course.day } </StyledTableCell>
+                  <StyledTableCell align="center"> { course.start_time } </StyledTableCell>
+                  <StyledTableCell align="center"> { course.end_time } </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+      <form action="/">
+        <button class="button"><span>หน้าแรก</span></button>
+      </form>
+    </Layout>
+  )
+}
+
+export default CoursesPage

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Boostrap 5 Sass Starter`,
+    title: `ลงทะเบียนเรียน`,
     description: `A simple bootstrap 5 and Sass starter for Gatsby. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@r-ichard`,
   },
@@ -36,6 +36,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+			resolve: '@directus/gatsby-source-directus',
+			options: {
+				url: `https://4q3tw9zi.directus.app`, // Fill with your Directus instance address
+				auth: {
+					token: 's3zd0Qb6RBlxTJ_-RogfbJ0GfcFOYmM0', // You can use a static token from an user
+
+					// Or you can use the credentials of an user
+					//email: "6210110342@psu.ac.th",
+					//password: "admin",
+				},
+			},
+		},
     `gatsby-plugin-gatsby-cloud`,
   ],
 }

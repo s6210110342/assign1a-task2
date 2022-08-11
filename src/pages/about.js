@@ -6,23 +6,36 @@ import Seo from "../components/seo"
 
 const AboutPage = () => (
   <Layout>
-    <Seo title="About Gatsby Bootsrap 5 starter" />
+    <Seo title="About Us" />
     <div className="container  my-5">
-
-      <div className="container">
-        <h1 >What you need to know</h1>
+    <div className="container">
+        <h1>คณะผู้จัดทำ</h1>
         <p>
           <ul>
-            <li>Bootstrap 5 support with SASS</li>
-            <li>Customize theme via <span className="font-monospace ">layout.scss</span></li>
-            <li>If any issue report to <a href="https://github.com/r-ichard/gatsby-starter-bootstrap-5" target="_blank" rel="noopener noreferrer">Github Repo</a></li>
+            {/* 1 */}
+            <li> <b>ชื่อ-สกุล: </b> นางสาว ศิขรินทร์ สามงามทอง</li> 
+                 <b>รหัสนักศึกษา: </b> 6210110342
+            {/* 2 */}
+            <li> <b>ชื่อ-สกุล: </b> นางสาว สะอาดะห์ ดายันตา</li> 
+                 <b>รหัสนักศึกษา: </b> 6210110362
+            {/* 3 */}
+            <li> <b>ชื่อ-สกุล: </b> นาย ไกรวิชญ์ เสนาสุ</li>
+                 <b>รหัสนักศึกษา: </b> 6210110636
+            {/* 4 */}
+            <li> <b>ชื่อ-สกุล: </b> นางสาว สาวศุภาพิชญ์ จรูญศักด์</li>    
+                 <b>รหัสนักศึกษา: </b> 6210110695
+            {/* 5 */}
+            <li> <b>ชื่อ-สกุล: </b> นางสาว ฟาเดีย หวังหลิ่ม</li> 
+                 <b>รหัสนักศึกษา: </b> 6210110723
           </ul>
         </p>
-        <p>Created by <a href="https://github.com/r-ichard" target="_blank" rel="noopener noreferrer">Richard Raduly</a></p>
+        <p>Link URL Github <a href="https://github.com/r-ichard" target="_blank" rel="noopener noreferrer">here...</a></p>
       </div>
       <Link to="/">Go back to the homepage</Link>
     </div>
   </Layout>
 )
+
+export const Head = () => <Seo title="Page two" />
 
 export default AboutPage

@@ -78,7 +78,7 @@ const MemberPage = () => {
           </Table>
         </TableContainer>
       </div>
-      <form action="/">
+      <form action="./index.js">
         <button class="button"><span>หน้าแรก</span></button>
       </form>
     </Layout>

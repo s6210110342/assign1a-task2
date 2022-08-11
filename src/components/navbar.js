@@ -24,13 +24,6 @@ const Navbar = ({ siteTitle }) => {
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
             <li className="nav-item">
               <ExactNavLink
-                to="/"
-              >
-                หน้าแรก
-              </ExactNavLink>
-            </li>
-            <li className="nav-item">
-              <ExactNavLink
                 to="/members"
               >
                 รายชื่อนักศึกษาทั้งหมด
@@ -45,7 +38,7 @@ const Navbar = ({ siteTitle }) => {
             </li>
             <li className="nav-item">
               <ExactNavLink
-                to="/courses"
+                to="/enrollment"
               >
                 ผลการลงทะเบียน
               </ExactNavLink>

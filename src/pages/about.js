@@ -32,9 +32,7 @@ const AboutPage = () => (
         </p>
         <p>Link URL Github <a href="https://github.com/s6210110342/assign1a-task2" target="_blank" rel="noopener noreferrer">here...</a></p>
       </div>
-      <form action="/">
-        <button class="button"><span>หน้าแรก</span></button>
-      </form>
+      <Link to="/">หน้าแรก</Link>
     </div>
   </Layout>
 )
